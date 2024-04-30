@@ -1,24 +1,42 @@
 {
-  "name": "ac.com",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
-  }
+    "name": "ac.com",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "build-schema": "dotenv -- tsx db/buildSchema.ts"
+    },
+    "dependencies": {
+        "next": "14.2.3",
+        "pg": "^8.11.5",
+        "react": "^18",
+        "react-dom": "^18",
+        "zod": "^3.23.4"
+    },
+    "devDependencies": {
+        "@jest/globals": "^29.7.0",
+        "@testing-library/jest-dom": "^6.4.2",
+        "@testing-library/react": "^15.0.5",
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20",
+        "@types/pg": "^8.11.5",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "dotenv-cli": "^7.4.1",
+        "eslint": "^8",
+        "eslint-config-next": "14.2.3",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "sass": "^1.75.0",
+        "ts-jest": "^29.1.2",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.7.3",
+        "typescript": "^5"
+    }
 }
