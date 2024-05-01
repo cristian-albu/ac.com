@@ -38,6 +38,11 @@ export const CR_LINK = {
     label: "link",
     maxLength: 255,
 } as const;
+export const CR_ISSUER = {
+    label: "issuer",
+    maxLength: 63,
+} as const;
+export const CR_DATE_ISSUED = "date_issued";
 
 // Skill Certifications
 export const SC_TABLE = "skill_certifications";

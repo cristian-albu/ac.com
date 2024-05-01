@@ -10,8 +10,8 @@ const SkillCertifications = `--sql
 CREATE TABLE ${SC_TABLE}(
         ${SK_ID} INT,
         ${CR_ID} INT,
-        FOREIGN KEY (${SK_ID}) REFERENCES ${SK_TABLE}(${SK_ID}),
-        FOREIGN KEY (${CR_ID}) REFERENCES ${CR_TABLE}(${CR_ID}),
+        FOREIGN KEY (${SK_ID}) REFERENCES ${SK_TABLE}(${SK_ID}) ON DELETE CASCADE,
+        FOREIGN KEY (${CR_ID}) REFERENCES ${CR_TABLE}(${CR_ID}) ON DELETE CASCADE,
         PRIMARY KEY (${SK_ID}, ${CR_ID})
 );`;
 

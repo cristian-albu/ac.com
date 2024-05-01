@@ -1,11 +1,11 @@
 import { PoolClient } from "pg";
 import pool from "./client";
-import { skills_table } from "./schema/skills";
-import { certifications_table } from "./schema/certifications";
-import { skill_certifications } from "./schema/skillCertifications";
+import { skills_table } from "./schema/skills.schema";
+import { certifications_table } from "./schema/certifications.schema";
+import { skill_certifications } from "./schema/skillCertifications.schema";
 
 // Order matters
-const tables = [skills_table, certifications_table, skill_certifications];
+const tables = [certifications_table, skills_table, skill_certifications];
 
 async function checkIfTableExists(name: string, client: PoolClient) {
     try {
